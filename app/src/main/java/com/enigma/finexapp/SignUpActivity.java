@@ -106,7 +106,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
-        userInfo.put("credit", mCredit);
+        userInfo.put("balance", mCredit);
 
         mUserDatabase.updateChildren(userInfo);
         finish();

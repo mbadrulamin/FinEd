@@ -4,10 +4,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.enigma.finexapp.R;
+import com.enigma.finexapp.UserInfo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,10 +67,55 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
+    private TextView mUserBalance, mUsername;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mUserDatabase;
+    private String userId, mName, mBalance;
+    UserInfo userInfo = new UserInfo();
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        mAuth = FirebaseAuth.getInstance();
+        userId = mAuth.getCurrentUser().getUid();
+        mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+
+        mUsername = view.findViewById(R.id.user_name);
+        mUserBalance = view.findViewById(R.id.current_balance);
+        getUserInfo();
+
+
+        return view;
     }
+
+    private void getUserInfo(){
+
+        mUserDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists() && snapshot.getChildrenCount() > 0){
+                    Map<String, Object> map = (Map<String, Object>) snapshot.getValue();
+                    if (map.get("name") != null){
+                        mName = map.get("name").toString();
+                        mUsername.setText(mName);
+                    }
+                    if (map.get("balance") != null){
+                        mBalance = map.get("balance").toString();
+                        mUserBalance.setText(mBalance);
+                        userInfo.setBalance(Integer.valueOf(mBalance));
+                    }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 }
