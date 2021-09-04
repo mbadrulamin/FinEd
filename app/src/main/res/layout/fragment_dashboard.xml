@@ -39,7 +39,7 @@
                     android:layout_height="match_parent">
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/earn"
+                        android:id="@+id/maintenance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-60dp"
@@ -53,7 +53,7 @@
                         android:id="@+id/earnText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/earn"
+                        android:layout_alignBottom="@id/maintenance"
                         android:layout_centerHorizontal="true"
                         android:text="Earning"
                         android:textSize="16sp"

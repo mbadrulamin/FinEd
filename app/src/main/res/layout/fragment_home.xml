@@ -16,6 +16,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/maintenance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/borderProfile"
+        app:layout_constraintEnd_toEndOf="@+id/borderProfile"
+        app:layout_constraintStart_toStartOf="@+id/borderProfile"
+        app:layout_constraintTop_toTopOf="@+id/borderProfile"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/profile">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
     <ImageView
         android:id="@+id/profile_image"
         android:layout_width="190dp"
@@ -25,6 +39,7 @@
         app:layout_constraintStart_toStartOf="@+id/borderProfile"
         app:layout_constraintTop_toTopOf="@+id/borderProfile"
         tools:srcCompat="@tools:sample/avatars" />
+
 
     <TextView
         android:id="@+id/user_name"
@@ -57,8 +72,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/current_balance"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
