@@ -78,11 +78,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
+                android:gravity="center"
                 android:text="current_balance"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/profile_image"
-                app:layout_constraintStart_toStartOf="@+id/profile_image"
+                app:layout_constraintEnd_toEndOf="@+id/borderProfile"
+                app:layout_constraintStart_toStartOf="@+id/borderProfile"
                 app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
             <HorizontalScrollView
@@ -107,40 +108,144 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView1"
+                        android:id="@+id/earn_cardView"
                         android:layout_width="250dp"
                         android:layout_height="250dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="32dp"
+                        app:cardCornerRadius="12dp"
                         app:cardElevation="20dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/earn_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-60dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/earn">
+
+                            </com.airbnb.lottie.LottieAnimationView>
+
+                            <TextView
+                                android:id="@+id/current_job"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:text="current_job"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView"
+                        android:id="@+id/saving_cardView"
                         android:layout_width="250dp"
                         android:layout_height="250dp"
                         android:layout_marginStart="32dp"
+                        app:cardCornerRadius="12dp"
                         app:cardElevation="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/cardView1"
-                        app:layout_constraintStart_toEndOf="@+id/cardView1"
-                        app:layout_constraintTop_toTopOf="@+id/cardView1"
-                        app:layout_constraintVertical_bias="0.0">
+                        app:layout_constraintStart_toEndOf="@+id/earn_cardView"
+                        app:layout_constraintTop_toTopOf="@+id/earn_cardView">
 
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/spend_cardView"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="32dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        app:layout_constraintStart_toEndOf="@+id/saving_cardView"
+                        app:layout_constraintTop_toTopOf="@+id/saving_cardView">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/spend_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-40dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/spend">
+
+                            </com.airbnb.lottie.LottieAnimationView>
+
+                            <TextView
+                                android:id="@+id/current_spend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:text="current_spend"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/borrow_cardView"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="32dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="20dp"
+                        app:layout_constraintStart_toEndOf="@+id/spend_cardView"
+                        app:layout_constraintTop_toTopOf="@+id/spend_cardView" >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/protect_cardView"
                         android:layout_width="250dp"
                         android:layout_height="250dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginEnd="32dp"
+                        app:cardCornerRadius="12dp"
                         app:cardElevation="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/cardView"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/cardView"
-                        app:layout_constraintTop_toTopOf="@+id/cardView" />
+                        app:layout_constraintStart_toEndOf="@+id/borrow_cardView"
+                        app:layout_constraintTop_toTopOf="@+id/borrow_cardView" >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
