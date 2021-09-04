@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841291514184",
+    "project_id": "finexapp-1d187",
+    "storage_bucket": "finexapp-1d187.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841291514184:android:2b973b4a5b236c68e8b37d",
+        "android_client_info": {
+          "package_name": "com.enigma.finexapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841291514184-2a69jqogvhvgisrrtg51g8t2i5ciktqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv03kMKbfUfK4FG6qSy_TgkMJX8Ge12Ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841291514184-2a69jqogvhvgisrrtg51g8t2i5ciktqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
