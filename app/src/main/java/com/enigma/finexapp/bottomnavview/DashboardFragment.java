@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.enigma.finexapp.EarnActivity;
 import com.enigma.finexapp.R;
+import com.enigma.finexapp.SpendActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,7 +61,7 @@ public class DashboardFragment extends Fragment {
     }
 
 
-    CardView mEarn;
+    CardView mEarn, mSpend;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,11 +70,21 @@ public class DashboardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
         mEarn = view.findViewById(R.id.earningCard);
+        mSpend = view.findViewById(R.id.spendingCard);
 
         mEarn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), EarnActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        mSpend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SpendActivity.class);
                 startActivity(intent);
 
             }

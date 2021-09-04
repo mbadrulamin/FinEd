@@ -40,7 +40,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="500dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waveHeader">
@@ -62,47 +62,35 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/earnGrabDriverCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+
+                        <ImageView
                             android:id="@+id/earnGrabDriver"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
+                            android:src="@raw/grab_car_driver" />
 
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/grab_car_driver"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/earnGrabDriver"
-                            android:layout_alignStart="@+id/earnGrabDriver"
-                            android:layout_alignEnd="@+id/earnGrabDriver"
-                            android:layout_marginStart="-9dp"
-                            android:layout_marginEnd="-9dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
                             android:text="Grab Car Driver"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -110,7 +98,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/grabRiderCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
@@ -121,36 +109,22 @@
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+                        <ImageView
                             android:id="@+id/grabRider"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
-
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/grab_rider"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
+                            android:src="@raw/grab_rider" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/grabRider"
-                            android:layout_alignStart="@+id/grabRider"
-                            android:layout_alignEnd="@+id/grabRider"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginEnd="0dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
                             android:text="Grab Rider"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -158,7 +132,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/onlineBisCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
@@ -169,30 +143,21 @@
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+
+                        <ImageView
                             android:id="@+id/onlineBis"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
+                            android:src="@raw/online_business_2" />
 
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/online_business_2"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/onlineBis"
-                            android:layout_marginTop="2dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:text="Online Business"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -202,7 +167,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/partTimeCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
@@ -213,33 +178,21 @@
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+
+                        <ImageView
                             android:id="@+id/partTime"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
+                            android:src="@raw/part_time_job" />
 
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/part_time_job"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/partTime"
-                            android:layout_alignStart="@+id/partTime"
-                            android:layout_alignEnd="@+id/partTime"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginEnd="0dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
                             android:text="Part Time"
                             android:textSize="18sp"
@@ -250,7 +203,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/foodPandaCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
@@ -261,33 +214,21 @@
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+
+                        <ImageView
                             android:id="@+id/foodPanda"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
+                            android:src="@raw/rider_foodpanda" />
 
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/rider_foodpanda"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/foodPanda"
-                            android:layout_alignStart="@+id/foodPanda"
-                            android:layout_alignEnd="@+id/foodPanda"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginEnd="0dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
                             android:text="Foodpanda"
                             android:textSize="18sp"
@@ -298,7 +239,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/scholarshipCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
@@ -309,33 +250,21 @@
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+
+                        <ImageView
                             android:id="@+id/scholarship"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
+                            android:src="@raw/scholarship" />
 
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/scholarship"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/scholarship"
-                            android:layout_alignStart="@+id/scholarship"
-                            android:layout_alignEnd="@+id/scholarship"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginEnd="0dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
                             android:text="Scholarship"
                             android:textSize="18sp"
@@ -346,7 +275,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/waiterCard"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="150dp"
                     android:layout_margin="20dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
@@ -357,33 +286,21 @@
                         android:layout_gravity="center"
                         android:padding="16dp">
 
-                        <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+
+                        <ImageView
                             android:id="@+id/waiter"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_centerHorizontal="true"
-                            android:foregroundGravity="clip_horizontal">
+                            android:src="@raw/waiter" />
 
-
-                            <com.sdsmdg.harjot.longshadows.LongShadowsImageView
-
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@raw/waiter"
-                                app:shadow_angle="45"
-                                app:shadow_length="50" />
-
-                        </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/waiter"
-                            android:layout_alignStart="@+id/waiter"
-                            android:layout_alignEnd="@+id/waiter"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginEnd="0dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
                             android:text="Waiter"
                             android:textSize="18sp"
