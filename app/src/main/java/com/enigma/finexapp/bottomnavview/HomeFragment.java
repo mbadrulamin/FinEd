@@ -104,7 +104,7 @@ public class HomeFragment extends Fragment {
                     }
                     if (map.get("balance") != null){
                         mBalance = map.get("balance").toString();
-                        mUserBalance.setText(mBalance);
+                        mUserBalance.setText("Current Balance:\n RM"+mBalance);
                         userInfo.setBalance(Integer.valueOf(mBalance));
                     }
 
