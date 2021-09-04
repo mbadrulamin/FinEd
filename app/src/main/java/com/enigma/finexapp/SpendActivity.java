@@ -1,8 +1,11 @@
 package com.enigma.finexapp;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -12,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SpendActivity extends AppCompatActivity {
 
     TextView mStartSpend, mCheckAnswer;
+    Button mOK;
     CheckBox checkBox1, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6, checkBox7, checkBox8, checkBox9, checkBox10;
     Boolean c1 = false, c2 = false, c3 = false, c4 = false, c5 = false, c6 = false, c7 = false, c8 = false, c9 = false, c10 = false;
 
@@ -34,11 +38,48 @@ public class SpendActivity extends AppCompatActivity {
 
         mCheckAnswer = findViewById(R.id.checkAnswer);
 
-        mCheckAnswer.setOnClickListener(v -> {
-            if (c1 && c4 && c5 && c7 && c10){
-                //Pop up congratulate
+        mCheckAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (c1 && c4 && c5 && c7 && c10) {
+                    //Pop up congratulate
+                    final Dialog dialog = new Dialog(SpendActivity.this);
+                    //We have added a title in the custom layout. So let's disable the default title.
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    //The user will be able to cancel the dialog bu clicking anywhere outside the dialog.
+                    dialog.setCancelable(true);
+                    //Mention the name of the layout of your custom dialog.
+                    dialog.setContentView(R.layout.right_answer_popup);
+
+                    //Initializing the views of the dialog.
+                    mOK = dialog.findViewById(R.id.ok_button_correct);
+                    mOK.setOnClickListener(v1 -> {
+                        Intent intent = new Intent(getApplication(), spendStartActivity.class);
+                        startActivity(intent);
+                    });
+                    dialog.show();
+                }
+                else{
+                    //Pop up wrong answer
+                    final Dialog dialog = new Dialog(SpendActivity.this);
+                    //We have added a title in the custom layout. So let's disable the default title.
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    //The user will be able to cancel the dialog bu clicking anywhere outside the dialog.
+                    dialog.setCancelable(true);
+                    //Mention the name of the layout of your custom dialog.
+                    dialog.setContentView(R.layout.wrong_answer_popup);
+
+                    //Initializing the views of the dialog.
+                    mOK = dialog.findViewById(R.id.ok_button_wrong);
+                    mOK.setOnClickListener(v1 -> {
+                        Intent intent = new Intent(getApplication(), SpendActivity.class);
+                        startActivity(intent);
+                    });
+                    dialog.show();
+                }
             }
         });
+
 
         checkBox1 = findViewById(R.id.checkBox1);
         checkBox2 = findViewById(R.id.checkBox2);

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -68,10 +69,11 @@ public class HomeFragment extends Fragment {
     }
 
 
-    private TextView mUserBalance, mUsername;
+
+    private TextView mUserBalance, mUsername, mCurrentJob, mCurrentSpend;
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
-    private String userId, mName, mBalance;
+    private String userId, mName, mBalance, mJob, mSpend;
     UserInfo userInfo = new UserInfo();
 
     @Override
@@ -85,6 +87,8 @@ public class HomeFragment extends Fragment {
 
         mUsername = view.findViewById(R.id.user_name);
         mUserBalance = view.findViewById(R.id.current_balance);
+        mCurrentJob = view.findViewById(R.id.current_job);
+        mCurrentSpend = view.findViewById(R.id.current_spend);
         getUserInfo();
 
 
@@ -106,6 +110,15 @@ public class HomeFragment extends Fragment {
                         mBalance = map.get("balance").toString();
                         mUserBalance.setText("Current Balance:\n RM"+mBalance);
                         userInfo.setBalance(Integer.valueOf(mBalance));
+                    }
+                    if (map.get("job") != null){
+                        mJob = map.get("job").toString();
+                        mCurrentJob.setText("Current Job:\n" + mJob);
+                    }
+                    if (map.get("spend") != null){
+                        mSpend = map.get("spend").toString();
+                        mCurrentSpend.setText("Has Spend:\nRM" + mSpend);
+                        userInfo.setSpend(Integer.valueOf(mSpend));
                     }
 
                 }

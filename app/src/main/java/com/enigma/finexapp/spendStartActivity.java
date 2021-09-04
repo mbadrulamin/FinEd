@@ -1,5 +1,6 @@
 package com.enigma.finexapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -114,10 +115,17 @@ public class spendStartActivity extends AppCompatActivity {
 
     private void saveUserInformation() {
         userinfo.setBalance(userinfo.getBalance() - total);
+        userinfo.setSpend(userinfo.getSpend() + total);
+
         Integer balance = userinfo.getBalance();
+        Integer spend = userinfo.getSpend();
+
         Map userInfo = new HashMap();
         userInfo.put("balance", balance);
+        userInfo.put("spend", spend);
         mUserDatabase.updateChildren(userInfo);
+        Intent intent = new Intent(getApplication(), MainActivity.class);
+        startActivity(intent);
         finish();
 
     }

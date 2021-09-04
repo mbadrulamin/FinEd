@@ -103,10 +103,12 @@ public class SignUpActivity extends AppCompatActivity {
     private void saveUserInformation() {
         String mName = mNameField.getText().toString();
         Integer mCredit = 1000;
+        Integer mSpend = 0;
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
         userInfo.put("balance", mCredit);
+        userInfo.put("spend", mSpend);
 
         mUserDatabase.updateChildren(userInfo);
         finish();
