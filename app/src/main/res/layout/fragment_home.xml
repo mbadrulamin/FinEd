@@ -7,123 +7,148 @@
     tools:context=".bottomnavview.HomeFragment">
 
     <View
-        android:id="@+id/borderProfile"
-        android:layout_width="200dp"
+        android:id="@+id/transparentViewHome"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:layout_marginTop="64dp"
-        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/maintenance"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/borderProfile"
-        app:layout_constraintEnd_toEndOf="@+id/borderProfile"
-        app:layout_constraintStart_toStartOf="@+id/borderProfile"
-        app:layout_constraintTop_toTopOf="@+id/borderProfile"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/profile">
-
-    </com.airbnb.lottie.LottieAnimationView>
-
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        app:layout_constraintBottom_toBottomOf="@+id/borderProfile"
-        app:layout_constraintEnd_toEndOf="@+id/borderProfile"
-        app:layout_constraintStart_toStartOf="@+id/borderProfile"
-        app:layout_constraintTop_toTopOf="@+id/borderProfile"
-        tools:srcCompat="@tools:sample/avatars" />
-
-
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="user_name"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/borderProfile"
-        app:layout_constraintStart_toStartOf="@+id/borderProfile"
-        app:layout_constraintTop_toBottomOf="@+id/borderProfile" />
-
-    <TextView
-        android:id="@+id/current_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="current_balance"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/profile_image"
-        app:layout_constraintStart_toStartOf="@+id/profile_image"
-        app:layout_constraintTop_toBottomOf="@+id/user_name" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="375dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="500dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/current_balance"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintTop_toBottomOf="@+id/transparentViewHome">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView1"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_marginStart="32dp"
-                app:cardElevation="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/cardView1"
-                app:layout_constraintStart_toEndOf="@+id/cardView1"
-                app:layout_constraintTop_toTopOf="@+id/cardView1"
-                app:layout_constraintVertical_bias="0.0">
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                app:cardElevation="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            <View
+                android:id="@+id/borderProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/cardView"
-                app:layout_constraintTop_toTopOf="@+id/cardView" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/default_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/borderProfile"
+                app:layout_constraintEnd_toEndOf="@+id/borderProfile"
+                app:layout_constraintStart_toStartOf="@+id/borderProfile"
+                app:layout_constraintTop_toTopOf="@+id/borderProfile"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/profile">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:layout_constraintBottom_toBottomOf="@+id/borderProfile"
+                app:layout_constraintEnd_toEndOf="@+id/borderProfile"
+                app:layout_constraintStart_toStartOf="@+id/borderProfile"
+                app:layout_constraintTop_toTopOf="@+id/borderProfile"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="user_name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/borderProfile"
+                app:layout_constraintStart_toStartOf="@+id/borderProfile"
+                app:layout_constraintTop_toBottomOf="@+id/borderProfile" />
+
+            <TextView
+                android:id="@+id/current_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="current_balance"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                app:layout_constraintStart_toStartOf="@+id/profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="375dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/current_balance"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="32dp"
+                        app:cardElevation="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="32dp"
+                        app:cardElevation="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardView1"
+                        app:layout_constraintStart_toEndOf="@+id/cardView1"
+                        app:layout_constraintTop_toTopOf="@+id/cardView1"
+                        app:layout_constraintVertical_bias="0.0">
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        app:cardElevation="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cardView"
+                        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </HorizontalScrollView>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
