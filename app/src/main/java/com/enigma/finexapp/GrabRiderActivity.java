@@ -1,37 +1,32 @@
 package com.enigma.finexapp;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class JobDescActivity extends AppCompatActivity {
-
+public class GrabRiderActivity extends AppCompatActivity {
 
     private Button mGrabDriverJob, mOK;
     private String userId;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_job_desc);
+        setContentView(R.layout.activity_grab_rider);
         mAuth = FirebaseAuth.getInstance();
         userId = mAuth.getCurrentUser().getUid();
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
@@ -41,7 +36,6 @@ public class JobDescActivity extends AppCompatActivity {
         mGrabDriverJob.setOnClickListener(v -> {
             saveUserInformation();
         });
-
     }
 
     private void saveUserInformation() {
@@ -54,13 +48,13 @@ public class JobDescActivity extends AppCompatActivity {
         userInfo.put("job", job);
         mUserDatabase.updateChildren(userInfo);
         //Pop up congratulate
-        final Dialog dialog = new Dialog(JobDescActivity.this);
+        final Dialog dialog = new Dialog(GrabRiderActivity.this);
         //We have added a title in the custom layout. So let's disable the default title.
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //The user will be able to cancel the dialog bu clicking anywhere outside the dialog.
         dialog.setCancelable(true);
         //Mention the name of the layout of your custom dialog.
-        dialog.setContentView(R.layout.earn_popup);
+        dialog.setContentView(R.layout.earn_popup_grab);
 
         //Initializing the views of the dialog.
         mOK = dialog.findViewById(R.id.ok_button);
@@ -71,5 +65,4 @@ public class JobDescActivity extends AppCompatActivity {
         dialog.show();
 
     }
-
 }

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.enigma.finexapp.EarnActivity;
 import com.enigma.finexapp.R;
 import com.enigma.finexapp.SpendActivity;
+import com.enigma.finexapp.UnderMaintenanceActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,7 +62,7 @@ public class DashboardFragment extends Fragment {
     }
 
 
-    CardView mEarn, mSpend;
+    CardView mEarn, mSpend, mSaving, mBorrow, mProtect;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,7 +71,10 @@ public class DashboardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
         mEarn = view.findViewById(R.id.earningCard);
+        mSaving = view.findViewById(R.id.savingCard);
         mSpend = view.findViewById(R.id.spendingCard);
+        mBorrow = view.findViewById(R.id.borrowingCard);
+        mProtect = view.findViewById(R.id.protectCard);
 
         mEarn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,10 +85,37 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        mSaving.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
         mSpend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), SpendActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        mBorrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        mProtect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
                 startActivity(intent);
 
             }

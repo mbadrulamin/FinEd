@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JobDescActivity">
+    tools:context=".GrabCarDriverActivity">
 
     <TextView
         android:id="@+id/jobDesc"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="Become a Grab Riders for a part time job \n since the time is flexible "
+            android:text="Become a Grab Driver for a part time job \n since the time is flexible "
             android:textSize="20sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>

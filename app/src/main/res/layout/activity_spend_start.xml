@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/light_blue"
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:text="Current Balance"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/roundBalance_border"
@@ -58,25 +60,28 @@
                 android:id="@+id/balanceMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 android:text="RM"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/balanceText"
+                app:layout_constraintEnd_toEndOf="@+id/roundBalance_border"
                 app:layout_constraintTop_toTopOf="@+id/balanceText" />
 
-            <TextView
-                android:id="@+id/spendStartDesc"
-                android:layout_width="wrap_content"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/spend_start_anim"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Description later"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/roundBalance_border" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/spend">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

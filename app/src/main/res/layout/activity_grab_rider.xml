@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GrabCarDriverActivity">
+
+    <TextView
+        android:id="@+id/jobDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Job Description"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/grabRiderImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobDesc"
+        app:srcCompat="@raw/grab_rider" />
+
+    <View
+        android:id="@+id/grabRiderTitlebg"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grabRiderImage" />
+
+    <TextView
+        android:id="@+id/grabRiderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grab Rider"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/grabRiderTitlebg"
+        app:layout_constraintEnd_toEndOf="@+id/grabRiderTitlebg"
+        app:layout_constraintStart_toStartOf="@+id/grabRiderTitlebg"
+        app:layout_constraintTop_toTopOf="@+id/grabRiderTitlebg" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/grabRiderCardDesc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grabRiderTitlebg">
+
+        <TextView
+            android:id="@+id/grabRiderDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Become a Grab Rider for a part time job \n since the time is flexible "
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/desc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Average Earning"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grabRiderCardDesc" />
+
+    <TextView
+        android:id="@+id/desc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Working Hours"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/desc1"
+        app:layout_constraintTop_toBottomOf="@+id/desc1" />
+
+    <TextView
+        android:id="@+id/desc3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Working Days"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/desc2"
+        app:layout_constraintTop_toBottomOf="@+id/desc2" />
+
+    <TextView
+        android:id="@+id/desc4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:text="RM10/Trip"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/desc1"
+        app:layout_constraintTop_toTopOf="@+id/desc1" />
+
+    <TextView
+        android:id="@+id/desc5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anytime"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/desc4"
+        app:layout_constraintTop_toTopOf="@+id/desc2" />
+
+    <TextView
+        android:id="@+id/desc6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anytime"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/desc5"
+        app:layout_constraintTop_toTopOf="@+id/desc3" />
+
+    <Button
+        android:id="@+id/selectJob_button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_shape"
+        android:text="Pick this job"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
