@@ -58,7 +58,7 @@ public class GrabCarDriverActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.earn_popup_grab);
 
         //Initializing the views of the dialog.
-        mOK = dialog.findViewById(R.id.ok_button);
+        mOK = dialog.findViewById(R.id.okLost_button);
         mOK.setOnClickListener(v1 -> {
             Intent intent = new Intent(getApplication(), MainActivity.class);
             startActivity(intent);

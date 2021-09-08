@@ -19,7 +19,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:gravity="center"
-            android:text="Unfortunately! \nYour answer is wrong!"
+            android:text="Congratulations! \nYou have received RM 50 \nfor answer this question"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/ok_button_wrong"
+            android:id="@+id/okWin_button"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"

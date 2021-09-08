@@ -19,7 +19,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:gravity="center"
-            android:text="Unfortunately! \nYour answer is wrong!"
+            android:text="Ohh no! \nYou have been scam! \nAll your current money \nlost to scammer."
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/ok_button_wrong"
+            android:id="@+id/okLost_button"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
