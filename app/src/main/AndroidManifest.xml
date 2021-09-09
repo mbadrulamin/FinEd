@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinexApp">
         <activity
+            android:name=".PopUpScam"
+            android:exported="true" />
+        <activity
             android:name=".GrabRiderActivity"
             android:exported="true" />
         <activity
