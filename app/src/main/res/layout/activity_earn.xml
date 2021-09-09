@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Please select \nyour desired job"
+        android:text="Available \noptions"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"

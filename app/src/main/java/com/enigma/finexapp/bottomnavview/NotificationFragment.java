@@ -28,7 +28,7 @@ import java.util.ArrayList;
  * Use the {@link NotificationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NotificationFragment extends Fragment implements AdapterView.OnItemClickListener {
+public class NotificationFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,56 +77,7 @@ public class NotificationFragment extends Fragment implements AdapterView.OnItem
         return view;
     }
 
-    ListView myListView;
-    ArrayList<String> myArrayList = new ArrayList<>();
-    DatabaseReference mNotiDatabase;
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        ArrayAdapter<String> myArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, myArrayList);
-        mNotiDatabase = FirebaseDatabase.getInstance().getReference().child("Notifications");
-        myListView = (ListView)view.findViewById(R.id.notiList);
-        myListView.setAdapter(myArrayAdapter);
-        myListView.setOnItemClickListener(this);
 
 
 
-        mNotiDatabase.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value = snapshot.getValue(String.class);
-                myArrayList.add(value);
-                myArrayAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                myArrayAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (position==0){
-            Toast.makeText(getActivity(), "You click HELLO", Toast.LENGTH_LONG).show();
-        }
-    }
 }
