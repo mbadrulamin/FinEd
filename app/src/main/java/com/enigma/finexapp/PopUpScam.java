@@ -33,8 +33,8 @@ public class PopUpScam extends AppCompatActivity {
         userId = mAuth.getCurrentUser().getUid();
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
 
-        mYES = findViewById();
-        mNO = findViewById();
+        mYES = findViewById(R.id.yes_button);
+        mNO = findViewById(R.id.no_button);
 
         mYES.setOnClickListener(v -> {
             userLost();

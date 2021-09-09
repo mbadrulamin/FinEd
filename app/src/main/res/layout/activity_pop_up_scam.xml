@@ -4,6 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PopUpScam">
+    android:orientation="vertical">
+
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/waveHeader"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleY="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mwhCloseColor="@color/red"
+        app:mwhColorAlpha="0.5"
+        app:mwhGradientAngle="90"
+        app:mwhProgress="1"
+        app:mwhStartColor="@color/blue"
+        app:mwhVelocity="5"
+        app:mwhWaveHeight="25dp"
+        app:mwhWaves="MultiWave">
+
+    </com.scwang.wave.MultiWaveHeader>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@+id/waveHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/waveHeader"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/scam_task">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+
+    <TextView
+        android:id="@+id/question_statement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:text="You've won RM5000, please call to this number +999759261451 and give the TAC number that you've received for us to bank in the money to your account."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waveHeader" />
+
+    <TextView
+        android:id="@+id/question_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Do you will call the number above and give the TAC number?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/question_statement"
+        app:layout_constraintStart_toStartOf="@+id/question_statement"
+        app:layout_constraintTop_toBottomOf="@+id/question_statement" />
+
+    <Button
+        android:id="@+id/yes_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_shape"
+        android:text="YES"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/question_state"
+        app:layout_constraintTop_toBottomOf="@+id/question_state" />
+
+    <Button
+        android:id="@+id/no_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_shape"
+        android:text="NO"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/question_state"
+        app:layout_constraintTop_toBottomOf="@+id/question_state" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

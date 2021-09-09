@@ -53,7 +53,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/task">
+                        app:lottie_rawRes="@raw/scam_task">
 
                     </com.airbnb.lottie.LottieAnimationView>
 
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Scammer task"
+                        android:text="TAC Number"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/task1"
@@ -72,10 +72,9 @@
                         android:id="@+id/desc_task1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Click here to complete this task"
-                        app:layout_constraintBottom_toBottomOf="@+id/task1"
-                        app:layout_constraintStart_toEndOf="@+id/task1" />
+                        android:text="You've won RM5000, please send the TAC \nfor us to bank in to your account"
+                        app:layout_constraintStart_toEndOf="@+id/task1"
+                        app:layout_constraintTop_toBottomOf="@+id/task1_textView" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -109,7 +108,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/task">
+                        app:lottie_rawRes="@raw/spend">
 
                     </com.airbnb.lottie.LottieAnimationView>
 
@@ -118,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Spending task"
+                        android:text="Spending"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/task2"
@@ -128,10 +127,9 @@
                         android:id="@+id/desc_task2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Click here to complete this task"
-                        app:layout_constraintBottom_toBottomOf="@+id/task2"
-                        app:layout_constraintStart_toEndOf="@+id/task2" />
+                        android:text="Spend RM2000 to things that you need"
+                        app:layout_constraintStart_toEndOf="@+id/task2"
+                        app:layout_constraintTop_toBottomOf="@+id/task2_textView" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -164,7 +162,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/task">
+                        app:lottie_rawRes="@raw/borrow_task">
 
                     </com.airbnb.lottie.LottieAnimationView>
 
@@ -173,7 +171,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Borrow task"
+                        android:text="Borrowing Annoucement"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/task3"
@@ -183,10 +181,9 @@
                         android:id="@+id/desc_task3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Click here to complete this task"
-                        app:layout_constraintBottom_toBottomOf="@+id/task3"
-                        app:layout_constraintStart_toEndOf="@+id/task3" />
+                        android:text="You need to complete the bank loan \nprocedure for you to start borrow money"
+                        app:layout_constraintStart_toEndOf="@+id/task3"
+                        app:layout_constraintTop_toBottomOf="@+id/task3_textView" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -219,7 +216,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/task">
+                        app:lottie_rawRes="@raw/protect">
 
                     </com.airbnb.lottie.LottieAnimationView>
 
@@ -228,7 +225,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Protect task"
+                        android:text="Protection History"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/task4"
@@ -238,10 +235,9 @@
                         android:id="@+id/desc_task4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Click here to complete this task"
-                        app:layout_constraintBottom_toBottomOf="@+id/task4"
-                        app:layout_constraintStart_toEndOf="@+id/task4" />
+                        android:text="Your protection knowledge currently none.\nPlease go to protecting section for info"
+                        app:layout_constraintStart_toEndOf="@+id/task4"
+                        app:layout_constraintTop_toBottomOf="@+id/task4_textView" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -276,7 +272,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/task">
+                        app:lottie_rawRes="@raw/saving">
 
                     </com.airbnb.lottie.LottieAnimationView>
 
@@ -285,7 +281,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Invest task"
+                        android:text="Stock Exchange"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/task5"
@@ -295,10 +291,9 @@
                         android:id="@+id/desc_task5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Click here to complete this task"
-                        app:layout_constraintBottom_toBottomOf="@+id/task5"
-                        app:layout_constraintStart_toEndOf="@+id/task5" />
+                        android:text="Apple is falling down within this week."
+                        app:layout_constraintStart_toEndOf="@+id/task5"
+                        app:layout_constraintTop_toBottomOf="@+id/task5_textView" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>

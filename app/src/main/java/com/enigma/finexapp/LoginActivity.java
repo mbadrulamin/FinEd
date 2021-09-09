@@ -209,11 +209,9 @@ public class LoginActivity extends AppCompatActivity {
         mAuth.removeAuthStateListener(firebaseAuthListener);
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        Intent intent_back = new Intent(LoginActivity.this,HomeActivity.class);
-//        startActivity(intent_back);
-//        finish();
-//    }
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 
 }

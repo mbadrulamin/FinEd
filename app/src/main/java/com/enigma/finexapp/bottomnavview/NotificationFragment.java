@@ -24,6 +24,7 @@ import com.enigma.finexapp.MainActivity;
 import com.enigma.finexapp.PopUpScam;
 import com.enigma.finexapp.R;
 import com.enigma.finexapp.SpendActivity;
+import com.enigma.finexapp.UnderMaintenanceActivity;
 import com.enigma.finexapp.UserInfo;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
@@ -82,17 +83,53 @@ public class NotificationFragment extends Fragment {
         }
     }
 
-    CardView mScammer;
+    CardView mScammer, mSpend, mBorrow, mProtect, mInvest;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notification, container, false);
         mScammer = view.findViewById(R.id.scammerTask_card);
+        mSpend = view.findViewById(R.id.spendTask_card);
+        mBorrow = view.findViewById(R.id.borrowTask_card);
+        mProtect = view.findViewById(R.id.protectTask_card);
+        mInvest = view.findViewById(R.id.investTask_card);
 
         mScammer.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), PopUpScam.class);
             startActivity(intent);
+        });
+
+        mSpend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBorrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mProtect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mInvest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                startActivity(intent);
+            }
         });
 
         return view;
