@@ -9,8 +9,11 @@ import android.view.ViewGroup;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.enigma.finexapp.BorrowActivity;
 import com.enigma.finexapp.EarnActivity;
+import com.enigma.finexapp.ProtectActivity;
 import com.enigma.finexapp.R;
+import com.enigma.finexapp.SavingActivity;
 import com.enigma.finexapp.SpendActivity;
 import com.enigma.finexapp.UnderMaintenanceActivity;
 
@@ -88,7 +91,7 @@ public class DashboardFragment extends Fragment {
         mSaving.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                Intent intent = new Intent(getActivity(), SavingActivity.class);
                 startActivity(intent);
 
             }
@@ -106,7 +109,7 @@ public class DashboardFragment extends Fragment {
         mBorrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                Intent intent = new Intent(getActivity(), BorrowActivity.class);
                 startActivity(intent);
 
             }
@@ -115,7 +118,7 @@ public class DashboardFragment extends Fragment {
         mProtect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UnderMaintenanceActivity.class);
+                Intent intent = new Intent(getActivity(), ProtectActivity.class);
                 startActivity(intent);
 
             }

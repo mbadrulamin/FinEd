@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinexApp">
         <activity
+            android:name=".ProtectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BorrowActivity"
+            android:exported="true" />
+        <activity
             android:name=".PopUpScam"
             android:exported="true" />
         <activity

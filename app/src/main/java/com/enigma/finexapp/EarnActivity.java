@@ -15,7 +15,7 @@ public class EarnActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_earn);
 
-        mEarnGrabDriver = findViewById(R.id.earnGrabDriverCard);
+        mEarnGrabDriver = findViewById(R.id.introProtectCard);
         mEarnGrabRider = findViewById(R.id.grabRiderCard);
         mEarnOnlineBusiness = findViewById(R.id.onlineBisCard);
         mEarnPartTime = findViewById(R.id.partTimeCard);

@@ -26,8 +26,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/ic_dashboard_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/earn">
+        app:lottie_rawRes="@raw/protect">
 
     </com.airbnb.lottie.LottieAnimationView>
 
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Earning Option Available"
+        android:text="Available Info Option"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -80,7 +80,8 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
 
-                    <RelativeLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card_layout1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -91,21 +92,24 @@
                             android:id="@+id/earnGrabDriver"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/grab_car_driver" />
+                            android:src="@raw/question_mark"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
 
                         <TextView
+                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/earnGrabDriver"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
-                            android:text="Grab Car Driver"
+                            android:text="What is \nProtect?"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/earnGrabDriver" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -116,7 +120,8 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
 
-                    <RelativeLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card_layout2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -126,20 +131,23 @@
                             android:id="@+id/grabRider"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/grab_rider" />
+                            android:src="@raw/warning"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/grabRider"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
-                            android:text="Grab Rider"
+                            android:text="Precaution to Take"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/grabRider" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -150,7 +158,8 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
 
-                    <RelativeLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card_layout3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -161,20 +170,24 @@
                             android:id="@+id/onlineBis"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/online_business_2" />
+                            android:src="@raw/virus"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
 
                         <TextView
+                            android:id="@+id/textView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/onlineBis"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
-                            android:text="Online Business"
+                            android:gravity="center_horizontal"
+                            android:text="What is Malware?"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/onlineBis" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -185,7 +198,8 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="20dp">
 
-                    <RelativeLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card_layout4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -196,129 +210,24 @@
                             android:id="@+id/partTime"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/part_time_job" />
+                            android:src="@raw/money_loss"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
 
                         <TextView
+                            android:id="@+id/textView5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/partTime"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
                             android:gravity="center_horizontal"
-                            android:text="Part Time"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/foodPandaCard"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="20dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:padding="16dp">
-
-
-                        <ImageView
-                            android:id="@+id/foodPanda"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/rider_foodpanda" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/foodPanda"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
-                            android:gravity="center_horizontal"
-                            android:text="Foodpanda"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/scholarshipCard"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="20dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:padding="16dp">
-
-
-                        <ImageView
-                            android:id="@+id/scholarship"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/scholarship" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/scholarship"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
-                            android:gravity="center_horizontal"
-                            android:text="Scholarship"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/waiterCard"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="20dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:padding="16dp">
-
-
-                        <ImageView
-                            android:id="@+id/waiter"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerHorizontal="true"
-                            android:src="@raw/waiter" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/waiter"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentEnd="true"
-                            android:gravity="center_horizontal"
-                            android:text="Waiter"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                            android:text="Impact not \nProtect"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/partTime" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
 

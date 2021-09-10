@@ -75,7 +75,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignBottom="@id/default_profile"
                                 android:layout_centerHorizontal="true"
-                                android:text="Earning"
+                                android:text="To Earn"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -112,8 +112,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignBottom="@id/saving"
                                 android:layout_centerHorizontal="true"
-                                android:text="Saving And Investment"
-                                android:textSize="14sp"
+                                android:text="To Save and Invest"
+                                android:textSize="16sp"
                                 android:textStyle="bold" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -161,7 +161,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignBottom="@id/spend"
                                 android:layout_centerHorizontal="true"
-                                android:text="Spending"
+                                android:text="To Spend"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -200,7 +200,7 @@
                                 android:layout_alignBottom="@id/borrow"
                                 android:layout_centerHorizontal="true"
                                 android:includeFontPadding="false"
-                                android:text="Borrowing"
+                                android:text="To Borrow"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -251,7 +251,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignBottom="@id/protect"
                                 android:layout_centerHorizontal="true"
-                                android:text="Protecting"
+                                android:text="To Protect"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
