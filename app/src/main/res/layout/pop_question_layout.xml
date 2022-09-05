@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
+    android:layout_width="400dp"
     android:layout_height="625dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,9 +57,11 @@
             android:id="@+id/popQuiz_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="What is the definition of Amanah in Islam?"
+            android:text="Today, many transaction use the online banking.\nWhat is the name of the risk\nthat came from this danger?"
+            android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +75,6 @@
             android:layout_marginTop="32dp"
             android:ems="10"
             android:hint="Answer"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toStartOf="@+id/popQuiz_checkAnswer"
             app:layout_constraintStart_toStartOf="@+id/popQuiz_question"
             app:layout_constraintTop_toBottomOf="@+id/popQuiz_question" />
@@ -86,8 +87,8 @@
             android:background="@drawable/round_shape"
             android:text="Get Hint From Lecturer"
             android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="@+id/popQuiz_checkAnswer"
-            app:layout_constraintStart_toStartOf="@+id/popQuiz_answer"
+            app:layout_constraintEnd_toEndOf="@+id/popQuiz_question"
+            app:layout_constraintStart_toStartOf="@+id/popQuiz_question"
             app:layout_constraintTop_toBottomOf="@+id/popQuiz_answer" />
 
         <ImageView
