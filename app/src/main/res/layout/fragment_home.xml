@@ -15,8 +15,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/transparentViewHome">
@@ -87,8 +88,9 @@
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="375dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -111,8 +113,10 @@
                         android:layout_height="250dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="32dp"
+                        android:layout_marginBottom="85dp"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
@@ -167,8 +171,8 @@
                                 android:id="@+id/saving_home"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="10dp"
                                 android:layout_marginTop="-20dp"
+                                android:padding="10dp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -245,7 +249,7 @@
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp"
                         app:layout_constraintStart_toEndOf="@+id/spend_cardView"
-                        app:layout_constraintTop_toTopOf="@+id/spend_cardView" >
+                        app:layout_constraintTop_toTopOf="@+id/spend_cardView">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -291,7 +295,7 @@
                         app:cardElevation="20dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/borrow_cardView"
-                        app:layout_constraintTop_toTopOf="@+id/borrow_cardView" >
+                        app:layout_constraintTop_toTopOf="@+id/borrow_cardView">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"

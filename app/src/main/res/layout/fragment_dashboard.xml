@@ -11,21 +11,27 @@
         android:id="@+id/transparentViewDash"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/transparentViewDash">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -53,16 +59,21 @@
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp">
 
-                        <RelativeLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/earningRL"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.airbnb.lottie.LottieAnimationView
                                 android:id="@+id/default_profile"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="-60dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintBottom_toTopOf="@+id/earnText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:lottie_autoPlay="true"
                                 app:lottie_loop="true"
                                 app:lottie_rawRes="@raw/earn">
@@ -73,13 +84,16 @@
                                 android:id="@+id/earnText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/default_profile"
-                                android:layout_centerHorizontal="true"
-                                android:text="To Earn"
+                                android:layout_marginBottom="8dp"
+                                android:text="To Earn\n(Likasbi - لكسب)"
+                                android:textAlignment="center"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/default_profile"
+                                app:layout_constraintStart_toStartOf="@+id/default_profile" />
 
-                        </RelativeLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -91,15 +105,21 @@
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp">
 
-                        <RelativeLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/savingRL"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.airbnb.lottie.LottieAnimationView
                                 android:id="@+id/saving"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/savingText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:lottie_autoPlay="true"
                                 app:lottie_loop="true"
                                 app:lottie_rawRes="@raw/saving">
@@ -110,12 +130,15 @@
                                 android:id="@+id/savingText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/saving"
-                                android:layout_centerHorizontal="true"
-                                android:text="To Save and Invest"
+                                android:layout_marginBottom="8dp"
+                                android:text="To Save and Invest\n(Lilistismar - الاستثمار)"
+                                android:textAlignment="center"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
-                        </RelativeLayout>
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/saving"
+                                app:layout_constraintStart_toStartOf="@+id/saving" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
@@ -140,15 +163,21 @@
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp">
 
-                        <RelativeLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/spendingRL"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.airbnb.lottie.LottieAnimationView
                                 android:id="@+id/spend"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/spendText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:lottie_autoPlay="true"
                                 app:lottie_loop="true"
                                 app:lottie_rawRes="@raw/spend">
@@ -159,13 +188,16 @@
                                 android:id="@+id/spendText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/spend"
-                                android:layout_centerHorizontal="true"
-                                android:text="To Spend"
+                                android:layout_marginBottom="8dp"
+                                android:text="To Spend\n(Litanaffuq - لتنفق)"
+                                android:textAlignment="center"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/spend"
+                                app:layout_constraintStart_toStartOf="@+id/spend" />
 
-                        </RelativeLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -177,16 +209,21 @@
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp">
 
-                        <RelativeLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/borrowingRL"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.airbnb.lottie.LottieAnimationView
                                 android:id="@+id/borrow"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
                                 android:padding="30dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/borrowText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:lottie_autoPlay="true"
                                 app:lottie_loop="true"
                                 app:lottie_rawRes="@raw/borrow">
@@ -197,14 +234,17 @@
                                 android:id="@+id/borrowText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/borrow"
-                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="8dp"
                                 android:includeFontPadding="false"
-                                android:text="To Borrow"
+                                android:text="To Borrow\n(Yastalifu - يستلف)"
+                                android:textAlignment="center"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/borrow"
+                                app:layout_constraintStart_toStartOf="@+id/borrow" />
 
-                        </RelativeLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
@@ -215,6 +255,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -229,16 +270,20 @@
                         app:cardCornerRadius="12dp"
                         app:cardElevation="20dp">
 
-                        <RelativeLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/protectRL"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <com.airbnb.lottie.LottieAnimationView
                                 android:id="@+id/protect"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="-30dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/protectText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:lottie_autoPlay="true"
                                 app:lottie_loop="true"
                                 app:lottie_rawRes="@raw/protect">
@@ -249,13 +294,16 @@
                                 android:id="@+id/protectText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@id/protect"
-                                android:layout_centerHorizontal="true"
-                                android:text="To Protect"
+                                android:layout_marginBottom="8dp"
+                                android:text="To Protect (Lihimayah - لحماية)"
+                                android:textAlignment="center"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/protect"
+                                app:layout_constraintStart_toStartOf="@+id/protect" />
 
-                        </RelativeLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
