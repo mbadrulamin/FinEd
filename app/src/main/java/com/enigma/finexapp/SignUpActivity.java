@@ -84,7 +84,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id);
                                     saveUserInformation();
 
-                                    Intent intent = new Intent(SignUpActivity.this, EarnActivity.class);
+                                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
