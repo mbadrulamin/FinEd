@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="625dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/popQuiz_waveHeader"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleY="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mwhCloseColor="@color/red"
+            app:mwhColorAlpha="0.5"
+            app:mwhGradientAngle="90"
+            app:mwhProgress="1"
+            app:mwhStartColor="@color/blue"
+            app:mwhVelocity="5"
+            app:mwhWaveHeight="25dp"
+            app:mwhWaves="MultiWave">
+
+        </com.scwang.wave.MultiWaveHeader>
+
+        <ImageView
+            android:id="@+id/popQuiz_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pop_question_logo" />
+
+        <TextView
+            android:id="@+id/popQuiz_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pop Question ! ! !"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/popQuiz_logo"
+            app:layout_constraintStart_toStartOf="@+id/popQuiz_logo"
+            app:layout_constraintTop_toBottomOf="@+id/popQuiz_logo" />
+
+        <TextView
+            android:id="@+id/popQuiz_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="What is the definition of Amanah in Islam?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popQuiz_waveHeader" />
+
+        <EditText
+            android:id="@+id/popQuiz_answer"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Answer"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/popQuiz_checkAnswer"
+            app:layout_constraintStart_toStartOf="@+id/popQuiz_question"
+            app:layout_constraintTop_toBottomOf="@+id/popQuiz_question" />
+
+        <Button
+            android:id="@+id/popQuiz_hintButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_shape"
+            android:text="Get Hint From Lecturer"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/popQuiz_checkAnswer"
+            app:layout_constraintStart_toStartOf="@+id/popQuiz_answer"
+            app:layout_constraintTop_toBottomOf="@+id/popQuiz_answer" />
+
+        <ImageView
+            android:id="@+id/popQuiz_checkAnswer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/popQuiz_answer"
+            app:layout_constraintEnd_toEndOf="@+id/popQuiz_question"
+            app:layout_constraintTop_toTopOf="@+id/popQuiz_answer"
+            app:srcCompat="@drawable/check" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

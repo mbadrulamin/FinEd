@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="625dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/inaq_waveHeader"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleY="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mwhCloseColor="@color/red"
+            app:mwhColorAlpha="0.5"
+            app:mwhGradientAngle="90"
+            app:mwhProgress="1"
+            app:mwhStartColor="@color/blue"
+            app:mwhVelocity="5"
+            app:mwhWaveHeight="25dp"
+            app:mwhWaves="MultiWave">
+
+        </com.scwang.wave.MultiWaveHeader>
+
+        <ImageView
+            android:id="@+id/inaq_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/inaq_logo" />
+
+        <TextView
+            android:id="@+id/inaq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="iNAQ Element"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/inaq_logo"
+            app:layout_constraintStart_toStartOf="@+id/inaq_logo"
+            app:layout_constraintTop_toBottomOf="@+id/inaq_logo" />
+
+        <TextView
+            android:id="@+id/inaq_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="What is the definition of Amanah in Islam?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inaq_waveHeader" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Answer"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/inaq_question"
+            app:layout_constraintStart_toStartOf="@+id/inaq_question"
+            app:layout_constraintTop_toBottomOf="@+id/inaq_question" />
+
+        <Button
+            android:id="@+id/inaq_answerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_shape"
+            android:text="Answer"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inaq_answerButton">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/inaq_contributor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Contributor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/contributor_inaq1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/inaq_contributor"
+                    app:layout_constraintTop_toBottomOf="@+id/inaq_contributor"
+                    app:srcCompat="@drawable/ic_person" />
+
+                <TextView
+                    android:id="@+id/inaq_contributor_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Ehsan"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/contributor_inaq1"
+                    app:layout_constraintStart_toEndOf="@+id/contributor_inaq1"
+                    app:layout_constraintTop_toTopOf="@+id/contributor_inaq1" />
+
+                <ImageView
+                    android:id="@+id/contributor_inaq2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/inaq_contributor"
+                    app:layout_constraintTop_toBottomOf="@+id/contributor_inaq1"
+                    app:srcCompat="@drawable/ic_person" />
+
+                <TextView
+                    android:id="@+id/inaq_contributor_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Ahmad"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/contributor_inaq2"
+                    app:layout_constraintStart_toEndOf="@+id/contributor_inaq2"
+                    app:layout_constraintTop_toTopOf="@+id/contributor_inaq2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
